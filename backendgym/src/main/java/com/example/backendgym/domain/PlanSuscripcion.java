@@ -9,10 +9,8 @@ public class PlanSuscripcion {
 
     // ===== Enums internos =====
     public enum Tipo {
-        BASICO,
-        PREMIUM,
-        VIP
-        // agrega otros si los necesitas (MENSUAL, ANUAL, etc.)
+        DESCUENTO,
+        HORAS
     }
 
     public enum Estado {

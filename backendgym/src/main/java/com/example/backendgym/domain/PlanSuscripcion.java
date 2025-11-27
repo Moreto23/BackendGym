@@ -7,18 +7,31 @@ import java.math.BigDecimal;
 @Table(name = "plan_suscripcion")
 public class PlanSuscripcion {
 
+    // ===== Enums internos =====
+    public enum Tipo {
+        BASICO,
+        PREMIUM,
+        VIP
+        // agrega otros si los necesitas (MENSUAL, ANUAL, etc.)
+    }
+
+    public enum Estado {
+        ACTIVO,
+        INACTIVO
+    }
+
+    // ===== Campos =====
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nombre;
 
-    // Si quieres puedes dejar solo @Column, sin columnDefinition
     @Column
     private String descripcion;
 
     @Lob
-    // ❌ Quita el columnDefinition = "LONGTEXT"
     private String beneficio;
 
     @Column(name = "descuento_porcentaje")
@@ -43,6 +56,8 @@ public class PlanSuscripcion {
     private Integer horasSemanaMax;
 
     private BigDecimal precio;
+
+    // ===== Getters y Setters =====
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -80,4 +95,3 @@ public class PlanSuscripcion {
     public BigDecimal getPrecio() { return precio; }
     public void setPrecio(BigDecimal precio) { this.precio = precio; }
 }
-

@@ -108,7 +108,8 @@ public class SecurityConfig {
         config.setAllowedOriginPatterns(List.of(
                 "http://localhost:4200",
                 "https://*.ngrok.app",
-                "https://*.loca.lt"
+                "https://*.loca.lt",
+                "https://frontendgym.onrender.com"   
         ));
         config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","PATCH","OPTIONS"));
         config.setAllowedHeaders(List.of("*"));

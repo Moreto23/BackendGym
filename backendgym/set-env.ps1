@@ -1,7 +1,7 @@
 # =======================
 # VARIABLES MERCADO PAGO
 # =======================
-$env:MP_ACCESS_TOKEN="APP_USR-475422353683123-101600-b81b50447ed9391c010c75ca7f935867-2929070190"
+$env:MP_ACCESS_TOKEN="APP_USR-4754..."
 $env:MP_BACK_SUCCESS="https://adventurous-juniper-gyromagnetic.ngrok-free.dev/api/pagos/mercadopago/return"
 $env:MP_BACK_FAILURE="https://adventurous-juniper-gyromagnetic.ngrok-free.dev/api/pagos/mercadopago/return"
 $env:MP_BACK_PENDING="https://adventurous-juniper-gyromagnetic.ngrok-free.dev/api/pagos/mercadopago/return"
@@ -9,10 +9,11 @@ $env:MP_NOTIFICATION_URL="https://adventurous-juniper-gyromagnetic.ngrok-free.de
 
 # =======================
 # VARIABLES BASE DE DATOS
+# (usando la misma BD de Railway)
 # =======================
-$env:DB_URL="jdbc:mysql://centerbeam.proxy.rlwy.net:22649/railway?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+$env:DB_URL="jdbc:mysql://mysql.railway.internal:3306/railway?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
 $env:DB_USER="root"
-$env:DB_PASSWORD="ZTrVBCOfsqQbepbVAnoFhPZmkQCjlGDW"
+$env:DB_PASSWORD="(el mismo de MYSQLPASSWORD)"
 
 # =======================
 # JWT SECRET

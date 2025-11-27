@@ -6,17 +6,19 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "plan_suscripcion")
 public class PlanSuscripcion {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nombre;
 
-    @Column(columnDefinition = "TEXT")
+    // Si quieres puedes dejar solo @Column, sin columnDefinition
+    @Column
     private String descripcion;
 
     @Lob
-    @Column(columnDefinition = "LONGTEXT")
+    // ❌ Quita el columnDefinition = "LONGTEXT"
     private String beneficio;
 
     @Column(name = "descuento_porcentaje")
@@ -25,29 +27,22 @@ public class PlanSuscripcion {
     @Column(name = "duracion_dias")
     private Integer duracionDias;
 
-    public enum Tipo { DESCUENTO, HORAS }
-
     @Enumerated(EnumType.STRING)
-    @Column(name = "tipo", length = 20)
     private Tipo tipo;
 
-    public enum Estado { ACTIVO, INACTIVO, SOLICITADO }
-
     @Enumerated(EnumType.STRING)
-    @Column(name = "estado", length = 20, nullable = false)
-    private Estado estado = Estado.INACTIVO;
+    private Estado estado;
 
     @Column(name = "horas_max_reserva")
     private Integer horasMaxReserva;
 
     @Column(name = "horas_dia_max")
-    private Integer horasDiaMax; // horas máximas por día para reservas
+    private Integer horasDiaMax;
 
     @Column(name = "horas_semana_max")
-    private Integer horasSemanaMax; // horas máximas por semana para reservas
+    private Integer horasSemanaMax;
 
-    @Column(name = "precio", nullable = false, precision = 10, scale = 2)
-    private BigDecimal precio = BigDecimal.ZERO;
+    private BigDecimal precio;
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }

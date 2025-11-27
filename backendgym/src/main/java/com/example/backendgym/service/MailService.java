@@ -22,11 +22,9 @@ public class MailService {
     private final HttpClient httpClient = HttpClient.newHttpClient();
     private final ObjectMapper objectMapper;
 
-    // API Key de Resend (vendrá desde variable de entorno RESEND_API_KEY)
     @Value("${resend.api.key:}")
     private String apiKey;
 
-    // Remitente. Ej: "AngelsGym <onboarding@resend.dev>"
     @Value("${resend.from:onboarding@resend.dev}")
     private String from;
 
@@ -78,7 +76,6 @@ public class MailService {
         }
     }
 
-    /** Enviar HTML con adjunto (PDF u otro) usando Resend */
     @Async
     public void sendHtmlWithAttachment(@Nullable String to,
                                        String subject,

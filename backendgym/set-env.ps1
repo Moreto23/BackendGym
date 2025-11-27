@@ -1,7 +1,7 @@
 # =======================
 # VARIABLES MERCADO PAGO
 # =======================
-$env:MP_ACCESS_TOKEN="APP_USR-4754..."
+$env:MP_ACCESS_TOKEN="APP_USR-475422353683123-101600-b81b50447ed9391c010c75ca7f935867-2929070190"
 $env:MP_BACK_SUCCESS="https://adventurous-juniper-gyromagnetic.ngrok-free.dev/api/pagos/mercadopago/return"
 $env:MP_BACK_FAILURE="https://adventurous-juniper-gyromagnetic.ngrok-free.dev/api/pagos/mercadopago/return"
 $env:MP_BACK_PENDING="https://adventurous-juniper-gyromagnetic.ngrok-free.dev/api/pagos/mercadopago/return"

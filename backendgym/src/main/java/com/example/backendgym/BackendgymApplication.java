@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableJpaRepositories(basePackages = "com.example.backendgym.repository")
 @EntityScan(basePackages = "com.example.backendgym.domain")
 @EnableScheduling
+@EnableAsync
 public class BackendgymApplication {
 
 	public static void main(String[] args) {
